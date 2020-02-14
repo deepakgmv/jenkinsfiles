@@ -2,19 +2,22 @@
 pipeline {
     agent any
     stages {
+	when{
+            $ENV = 'Icorp'
+        }    
         stage('one') {
             steps {
-                echo 'Hello World'
+                echo '$ENV'
             }
         }
 	stage('two') {
 	    steps {
-	        echo 'Acorp'
+	        echo '$ENV'
             }
 	}
 	stage('three') {
 	    steps {
-	        echo 'Pcorp'
+	        echo '$ENV'
 	    }
 	}
      }
