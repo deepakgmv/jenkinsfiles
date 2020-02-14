@@ -2,10 +2,10 @@
 pipeline {
     agent any
     stages {
-	when{
-            $ENV = 'Icorp'
-        }    
         stage('one') {
+        when{
+            $ENV 'Icorp'
+        }    
             steps {
                 echo '$ENV'
             }
