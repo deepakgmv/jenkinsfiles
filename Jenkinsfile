@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('one') {
         when{
-            $ENV 'Icorp'
+            environment 'Icorp'
         }    
             steps {
                 echo '$ENV'
